@@ -30,11 +30,15 @@ export default function List_() {
   }
   return (
     <div>
-      <div className='search_'>
+      <div className='wrap'>
+      <div className='search_' id='search_'>
+        
+
         <input type='text' id='search_bar' placeholder='Type Name Here' onChange={(e)=>search(e.target.value)}/>
-        <br></br>
+        
+        
 
-
+      </div>
       </div>
       <div>
         <table>
