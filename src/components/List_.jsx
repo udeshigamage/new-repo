@@ -1,10 +1,13 @@
 import React from 'react';
 import Services from './Services';
 import './List.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function List_() {
   const[data,setData]=React.useState([]);
   const[dataTable,setDataTable]=React.useState([]);
+  const navi=useNavigate();
+  
 
   React.useEffect(()=>{
     fetchdata();
@@ -28,8 +31,18 @@ export default function List_() {
     let search_Result=data.filter((d)=>d.name.toLowerCase().includes(search_val.toLowerCase()));
     setDataTable(search_Result);
   }
+  function click_hadle(id){
+    
+    
+    navi(`/view/${id}`);
+  }
   return (
     <div>
+      <div className='list_header'>
+
+        <h1 id='head_name'>List System Users</h1>
+
+      </div>
       <div className='wrap'>
       <div className='search_' id='search_'>
         
@@ -56,7 +69,7 @@ export default function List_() {
           <tbody>
             {
               dataTable.map((element)=>
-              <tr>
+              <tr onClick={()=>click_hadle(element.id)}>
                 <td>{element.id}</td>
                 <td>{element.name}</td>
                 <td>{element.username}</td>
