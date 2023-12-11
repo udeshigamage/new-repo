@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Services from './Services';
+import './Show_Profile.css';
 
 
 export default function Show_Profile() {
@@ -47,7 +48,7 @@ export default function Show_Profile() {
         <div>
         <div className='form_wrap'>
         {!isEditable &&   
-        <div>  
+        <div className='noneditable'>  
             <form>
                 <div>
                 <label>Name :
@@ -68,7 +69,7 @@ export default function Show_Profile() {
                 
                 
             </form>
-            <div>
+            <div className='bt_edit'>
             <button onClick={()=>setEdit(!isEditable)}>Edit</button>
             </div>
             </div>
@@ -78,7 +79,7 @@ export default function Show_Profile() {
             }
 
             {isEditable &&  
-            <div>  
+            <div className='editable'>  
             <form>
                 <div>
                 <label>Name :
@@ -99,8 +100,10 @@ export default function Show_Profile() {
                 
             
             </form>
+            <div className='bt_save'>
 
             <button onClick={()=>submitdata()}>Save</button>
+            </div>
 
             </div>
             }
