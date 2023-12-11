@@ -5,8 +5,11 @@ class Services{
         return httpCommon.get('/users');
     }
     getUserById(id){
-        return httpCommon.get('/users/${id}');
+        return httpCommon.get(`/users/${id}`);
 
+    }
+    updateUser(id,data){
+        return httpCommon.put(`/users/${id}`,data);
     }
 }
 
