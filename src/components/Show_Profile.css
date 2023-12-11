@@ -51,12 +51,17 @@
     border: none;
     cursor: pointer;
     border-radius: 10px;
+    
   }
   
   button:hover {
     background-color: #676767;
   }
-  
+  .bt_edit button{
+    font-size: 24px;
+    
+   
+  }
   
   
   /* Optional: Add some spacing between form fields */
