@@ -3,11 +3,14 @@ import { useParams } from "react-router-dom";
 import Services from "./Services";
 import { FaRegEdit } from "react-icons/fa";
 import "./Show_Profile.css";
+import { useNavigate } from "react-router-dom";
+import { RiArrowGoBackFill } from "react-icons/ri";
 
 export default function Show_Profile() {
   const params = useParams();
   const [data, setData] = React.useState({ company: {} });
   const [isEditable, setEdit] = React.useState(false);
+  const navi=useNavigate();
 
   React.useEffect(() => {
     console.log(params);
@@ -44,7 +47,9 @@ export default function Show_Profile() {
   return (
     <div>
       <div className="header_profile">
-        <h1>View System User</h1>
+        <div className="bt_h1">
+        <button onClick={()=>navi("/list")}><RiArrowGoBackFill /></button></div><div className="h1_head">
+        <h1>View System User</h1></div>
       </div>
       <div>
         <div className="form_wrap">
