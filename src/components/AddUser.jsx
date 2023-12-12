@@ -23,7 +23,6 @@ export default function AddUser() {
     let newErrors = {};
     let isValid = true;
 
-    // Simple validation for each field
     if (!data.name.trim()) {
       newErrors.name = "Name is required";
       isValid = false;
@@ -63,20 +62,18 @@ export default function AddUser() {
   }
 
   function isValidEmail(email) {
-    // You can use a more complex regex for email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
 
   function isValidPhone(phone) {
-    // You can use a more specific regex for phone validation
     const phoneRegex = /^\+?[0-9]{10,}$/;
     return phoneRegex.test(phone);
   }
 
   function isValidWebsite(website) {
-    // You can use a more specific regex for website validation
-    const websiteRegex = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
+    const websiteRegex =
+      /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
     return websiteRegex.test(website);
   }
 
