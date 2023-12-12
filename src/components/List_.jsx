@@ -2,6 +2,7 @@ import React from 'react';
 import Services from './Services';
 import './List.css';
 import { useNavigate } from 'react-router-dom';
+import { CiSearch } from "react-icons/ci";
 
 export default function List_() {
   const[data,setData]=React.useState([]);
@@ -48,7 +49,7 @@ export default function List_() {
         
 
         <input type='text' id='search_bar' placeholder='Type Name Here' onChange={(e)=>search(e.target.value)}/>
-        
+      
         
 
       </div>

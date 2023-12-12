@@ -51,7 +51,7 @@ tbody tr:hover{
   border: 3px solid #00b4cc;
   
   padding: 5px;
-  height: 20px;
+  height: 30px;
   border-radius: 50px;
   outline: none;
   color: #0c0107;
@@ -83,4 +83,3 @@ tbody tr:hover{
   padding: 0 20px 0 0;
   
 }
-  
