@@ -105,6 +105,7 @@ export default function Show_Profile() {
               <div className="bt_edit">
                 <button type="button" onClick={() => setEdit(!isEditable)}><FaRegEdit/></button>
               </div>
+              <div className="show_id"><h2>#{data.id}<br/>{data.username}</h2></div>
             </div>
           )}
 

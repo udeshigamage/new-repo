@@ -85,7 +85,7 @@
   }
   
   
-  /* Optional: Add some spacing between form fields */
+ 
   .form_wrap div {
     margin-bottom: 15px;
   }
@@ -93,3 +93,12 @@
   .noneditable input{
     background-color: #989797;
   }
+  .show_id {
+    position: fixed; 
+    bottom: 0;
+    right: 0;
+    /* margin: 50px;  */
+    margin-bottom: 200px;
+    margin-right: 50px;
+  }
+  
