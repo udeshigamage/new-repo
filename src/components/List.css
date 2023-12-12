@@ -83,3 +83,12 @@ tbody tr:hover{
   padding: 0 20px 0 0;
   
 }
+.bt_adduser{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 50px;
+}
+.bt_adduser button{
+  font-size: 28px;
+}

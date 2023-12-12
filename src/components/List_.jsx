@@ -3,6 +3,7 @@ import Services from './Services';
 import './List.css';
 import { useNavigate } from 'react-router-dom';
 import { CiSearch } from "react-icons/ci";
+import { MdPersonAddAlt1 } from "react-icons/md";
 
 export default function List_() {
   const[data,setData]=React.useState([]);
@@ -82,6 +83,7 @@ export default function List_() {
           </tbody>
         </table>
       </div>
+      <div className='bt_adduser'><button onClick={()=>navi("/adduser")}><MdPersonAddAlt1 /></button></div>
     </div>
   );
 }

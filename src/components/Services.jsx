@@ -11,6 +11,9 @@ class Services{
     updateUser(id,data){
         return httpCommon.put(`/users/${id}`,data);
     }
+    postUsers(data){
+        return httpCommon.post('/users',data);
+    }
 }
 
 export default new Services();
