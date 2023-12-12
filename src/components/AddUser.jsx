@@ -31,13 +31,14 @@ export default function AddUser() {
         <button onClick={()=>navi("/list")}><RiArrowGoBackFill /></button></div><div className="h1_head">
         <h1>Add System User</h1></div>
       </div>
-      <div>
+      <div className="form_wrap">
         <div>
           <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
             id="name"
+            placeholder="Full Name"
             onChange={(e) => handleValues(e.target.id, e.target.value)}
           />
         </div>
@@ -47,6 +48,7 @@ export default function AddUser() {
             type="text"
             name="email"
             id="email"
+            placeholder="example@mail.com"
             onChange={(e) => handleValues(e.target.id, e.target.value)}
           />
         </div>
@@ -56,6 +58,7 @@ export default function AddUser() {
             type="text"
             name="username"
             id="username"
+            placeholder="Username"
             onChange={(e) => handleValues(e.target.id, e.target.value)}
           />
         </div>
@@ -65,6 +68,7 @@ export default function AddUser() {
             type="text"
             name="phone"
             id="phone"
+            placeholder="+94xxxxxxxxx"
             onChange={(e) => handleValues(e.target.id, e.target.value)}
           />
         </div>
@@ -74,6 +78,7 @@ export default function AddUser() {
             type="text"
             name="website"
             id="website"
+            placeholder="example.com"
             onChange={(e) => handleValues(e.target.id, e.target.value)}
           />
         </div>
