@@ -1,23 +1,22 @@
-import React from 'react';
-import  SideNavPanel, {SideNavPanelItem, SideNavPanelSubItem} from './components/SideNavPanel';
-import './css/App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import List_ from "./components/List_.jsx";
+import Test from "./components/Test.jsx";
+import Show_Profile from "./components/Show_Profile.jsx";
+import AddUser from "./components/AddUser.jsx";
 
 const App = () => {
   return (
-    <SideNavPanel>
-      <SideNavPanelItem title="Customers">
-        <SideNavPanelSubItem>List Customers</SideNavPanelSubItem>
-        <SideNavPanelSubItem>Add New Customer</SideNavPanelSubItem>
-      </SideNavPanelItem>
-
-      <SideNavPanelItem title="Projects">
-        <SideNavPanelSubItem>List Projects</SideNavPanelSubItem>
-        <SideNavPanelSubItem>Add New Project</SideNavPanelSubItem>
-      </SideNavPanelItem>
-
-
-
-    </SideNavPanel>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/list" element={<List_ />} />
+          <Route path="/adduser" element={<AddUser />} />
+          <Route path="/" element={<Test />} />
+          <Route path="/view/:id" element={<Show_Profile />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 };
 
