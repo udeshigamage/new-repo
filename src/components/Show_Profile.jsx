@@ -10,7 +10,7 @@ export default function Show_Profile() {
   const params = useParams();
   const [data, setData] = React.useState({ company: {} });
   const [isEditable, setEdit] = React.useState(false);
-  const navi=useNavigate();
+  const navi = useNavigate();
 
   React.useEffect(() => {
     console.log(params);
@@ -48,8 +48,13 @@ export default function Show_Profile() {
     <div>
       <div className="header_profile">
         <div className="bt_h1">
-        <button onClick={()=>navi("/list")}><RiArrowGoBackFill /></button></div><div className="h1_head">
-        <h1>View System User</h1></div>
+          <button onClick={() => navi("/list")}>
+            <RiArrowGoBackFill />
+          </button>
+        </div>
+        <div className="h1_head">
+          <h1>View System User</h1>
+        </div>
       </div>
       <div>
         <div className="form_wrap">
@@ -103,9 +108,17 @@ export default function Show_Profile() {
                 </div>
               </form>
               <div className="bt_edit">
-                <button type="button" onClick={() => setEdit(!isEditable)}><FaRegEdit/></button>
+                <button type="button" onClick={() => setEdit(!isEditable)}>
+                  <FaRegEdit />
+                </button>
               </div>
-              <div className="show_id"><h2>#{data.id}<br/>{data.username}</h2></div>
+              <div className="show_id">
+                <h2>
+                  #{data.id}
+                  <br />
+                  {data.username}
+                </h2>
+              </div>
             </div>
           )}
 
@@ -175,7 +188,6 @@ export default function Show_Profile() {
           )}
         </div>
       </div>
-      
     </div>
   );
 }
