@@ -1,23 +1,26 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import List_ from "./components/List_.jsx";
-import Test from "./components/Test.jsx";
-import Show_Profile from "./components/Show_Profile.jsx";
-import AddUser from "./components/AddUser.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";  
+import SideNavigationPanel from "./components/SideNavigationPanel/SideNavigationPanel";
 
-const App = () => {
+import { SideBarData } from './data/SideBarData';
+import { AppRoutes } from './data/AppRoutes';
+
+import './App.css';
+
+
+function App() {
   return (
-    <div>
-      <BrowserRouter>
+    <>
+      <Router>
+        <SideNavigationPanel appRoutes={SideBarData}/>
         <Routes>
-          <Route path="/list" element={<List_ />} />
-          <Route path="/adduser" element={<AddUser />} />
-          <Route path="/" element={<Test />} />
-          <Route path="/view/:id" element={<Show_Profile />} />
+          <Route path={AppRoutes.systemUser.list.path} element={AppRoutes.systemUser.list.component} />
+          <Route path={AppRoutes.systemUser.view.path} element={AppRoutes.systemUser.view.component} />
+          <Route path={AppRoutes.systemUser.add.path} element={AppRoutes.systemUser.add.component} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </Router>
+    </>
   );
-};
+}
 
 export default App;
