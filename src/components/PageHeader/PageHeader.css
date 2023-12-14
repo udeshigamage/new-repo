@@ -1,0 +1,20 @@
+.page-header {
+    display: flex;
+    justify-content:end;
+    width: calc(100% - 2rem);
+    height: fit-content;
+    padding: 1rem;
+    background-color: #a8a8a8;
+    margin: 0;
+}
+
+.page-header > .page-header-title {
+    margin: 0 1rem;
+    font-size: 3rem;
+}
+
+.page-header > .page-header-goback-button {
+    position: fixed;
+    top: 1rem;
+    left: 6rem;
+}
