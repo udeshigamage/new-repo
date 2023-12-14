@@ -17,14 +17,15 @@ import "./ListUser.css";
 export default function ListUser() {
 
     const [users, setUsers] = useState([]);
-    const [search, setSearch] = useState("");
+    const [allUsers, setAllUsers] = useState([]);
+
     const navigate = useNavigate();
 
     function fetchUsers() {
         HttpCommon.get("/users")
         .then((res) => {
-            console.log(res.data);
-            setUsers(res.data);
+            setAllUsers(res.data);  
+            setUsers(res.data)
         })
         .catch((err) => {
             console.log(err);
@@ -32,7 +33,11 @@ export default function ListUser() {
     }
 
     function onSearch(e) {
-        setSearch(e.target.value);
+        // Normally we need to make make request to the api. This is just a hack to show the concept of search.
+        let result =  allUsers.filter((user) => {
+            return user.name.toLowerCase().includes(e.target.value.toLowerCase())
+        });
+        setUsers(result)
     }
 
     useEffect(() => {
