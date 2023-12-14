@@ -1,0 +1,28 @@
+.list-table {
+    width: 80%;
+    border-collapse: separate;
+    border-spacing: 0.2rem;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+.list-table > .list-table-head > .list-table-tr > .list-table-th {
+    background-color: #ffdf27af;
+    color: rgb(134, 134, 134);
+    padding: 10px;
+    text-align: center;
+    border: 1px dashed #fff;
+}
+
+.list-table > .list-table-body > .list-table-tr > .list-table-td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #000000;
+}
+
+.list-table > .list-table-body > .list-table-tr:hover {
+    background-color: #6d343436;
+    color: #fff;
+    cursor: pointer;
+}
