@@ -1,6 +1,6 @@
 .page-header {
     display: flex;
-    justify-content:end;
+    justify-content:flex-end;
     width: calc(100% - 2rem);
     height: fit-content;
     padding: 1rem;
