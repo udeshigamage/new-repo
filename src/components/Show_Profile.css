@@ -4,6 +4,7 @@
   height: 8em;
   border-radius: 0 10px 0 0;
 }
+
 .header_profile h1 {
   display: flex;
   justify-content: flex-end;
@@ -13,6 +14,7 @@
   height: 100%;
   padding: 0 20px 0 0;
 }
+
 .header_profile button {
   background-color: #a4a4a4;
   display: flex;
@@ -23,9 +25,11 @@
   height: 100%;
   font-size: 28px;
 }
+
 .bt_h1 {
   padding-left: 20px;
 }
+
 .header_profile {
   display: flex;
   justify-content: space-between;

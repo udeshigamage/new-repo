@@ -2,16 +2,16 @@ import httpCommon from "./http-common";
 
 class Services {
   getUsers() {
-    return httpCommon.get("/users");
+    return httpCommon.get("/user");
   }
   getUserById(id) {
-    return httpCommon.get(`/users/${id}`);
+    return httpCommon.get(`/user/${id}`);
   }
   updateUser(id, data) {
-    return httpCommon.put(`/users/${id}`, data);
+    return httpCommon.put(`/user/${id}`, data);
   }
   postUsers(data) {
-    return httpCommon.post("/users", data);
+    return httpCommon.post("/user", data);
   }
 }
 

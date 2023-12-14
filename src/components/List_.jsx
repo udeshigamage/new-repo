@@ -77,7 +77,7 @@ export default function List_() {
         </table>
       </div>
       <div className="bt_adduser">
-        <button onClick={() => navi("/adduser")}>
+        <button onClick={() => navi("/add")}>
           <MdPersonAddAlt1 />
         </button>
       </div>
