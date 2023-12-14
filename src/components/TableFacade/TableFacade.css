@@ -1,0 +1,4 @@
+.table-facade-container {
+    display: flex;
+    flex-direction: column;
+}

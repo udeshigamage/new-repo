@@ -7,6 +7,7 @@ import ListTable from "../../components/ListTable/ListTable";
 import FloatingButton from "../../components/FloatingButton/FloatingButton";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import Layout from "../../components/Layout/Layout";
+import TableFacade from "../../components/TableFacade/TableFacade";
 
 import { AppRoutes } from "../../data/AppRoutes";
 
@@ -48,7 +49,34 @@ export default function ListUser() {
         <Layout>
             <PageHeader title="List Users" />
             <SearchBar onSearch={onSearch} placeHolder="name" />
-            <ListTable columns={["id", "name", "email", "phone"]} data={users} onRowClick={(row) => navigate(AppRoutes.systemUser.view.path.split(':')[0] + row.id) } />
+            {/* <ListTable columns={["id", "name", "email", "phone"]} data={users} onRowClick={(row) => navigate(AppRoutes.systemUser.view.path.split(':')[0] + row.id) } /> */}
+            {/* <DataTable
+                columns={[
+                    {name: "Id", selector: "id", sortable:true},
+                    {name: "Name", selector: "name", sortable:true},
+                    {name: "Email", selector: "email", sortable:true},
+                    {name: "Contact Number", selector: "phone", sortable:true},
+                ]}
+                data={users}
+                pagination
+                highlightOnHover
+                responsive
+                paginationPerPage={7}
+                paginationRowsPerPageOptions={[5,10,20,25,30]} 
+                onRowClicked={(row) => navigate(AppRoutes.systemUser.view.path.split(':')[0] + row.id)}
+            /> */}
+
+            <TableFacade
+                columns={[
+                    {name: "Id", selector: "id", sortable:true},
+                    {name: "Name", selector: "name", sortable:true},
+                    {name: "Email", selector: "email", sortable:true},
+                    {name: "Contact Number", selector: "phone", sortable:true},
+                ]}
+                data={users}
+                onRowClicked={(row) => navigate(AppRoutes.systemUser.view.path.split(':')[0] + row.id)}
+            />
+
             <div className="page-list-add-button">
                 <FloatingButton  onClick={() => {navigate(AppRoutes.systemUser.add.path)}}>
                     <MdIcons.MdAdd />
