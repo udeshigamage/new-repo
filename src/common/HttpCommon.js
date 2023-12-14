@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const HttpCommon = axios.create({
-    baseURL: process.env.REACT_APP_AXIOS_BASE_URL,
+    // TODO : Please remove this and use entirely environment variables. This is done to help with the debugging.
+    baseURL: process.env.REACT_APP_AXIOS_BASE_URL ? process.env.REACT_APP_AXIOS_BASE_URL : "https://jsonplaceholder.typicode.com",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
